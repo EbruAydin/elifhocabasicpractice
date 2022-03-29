@@ -20,13 +20,13 @@ public class Q11_ArraysList {
 
         // 1. adim
 
-        Scanner scan=new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("Lutfen isminizi giriniz");
-        String username=scan.nextLine().trim();
+        String username = scan.nextLine().trim();
 
         // 2. adim
 
-        List<String>gecerliIsimler= new ArrayList<>();
+        List<String> gecerliIsimler = new ArrayList<>();
         gecerliIsimler.add("Ebru");
         gecerliIsimler.add("Meryem");
         gecerliIsimler.add("Dilek");
@@ -37,26 +37,22 @@ public class Q11_ArraysList {
 
         // 3. adim
 
-        boolean kullaniciIsmiVarMi=gecerliIsimler.contains(username);
+        boolean kullaniciIsmiVarMi = gecerliIsimler.contains(username);
 
         // 4. adim
-        if (kullaniciIsmiVarMi){
+        if (kullaniciIsmiVarMi) {// true yazmaya gerek yok aslinda. ben sadece denemek istedim. calisiyor yine.
             System.out.println("Bu kullanici adi zaten alinmis.");
         } else {
             System.out.println("Bu kullanici adini kullanabilirsiniz.");
         }
 
-        if (kullaniciIsmiVarMi){
-            int rastgeleSayi=new Random().nextInt(100000);
-            username= username+ ""+ rastgeleSayi;
-            System.out.println("Yeni kullanici adi olarak bunu kullanabilirsiniz " + username);
-        } else{
-            System.out.println("Yeni kullanici adi : " + username);
+        if (kullaniciIsmiVarMi) {
+            int rastgeleSayi = new Random().nextInt(100000);
+            username = username + "" + rastgeleSayi;// hiclik cikarilinca da kod calisiyor.
+            System.out.println("Yeni kullanici adi olarak bunu kullanabilirsiniz " + username);//listeden verince burasi
+        } else {
+            System.out.println("Yeni kullanici adi : " + username);//liste disinda isim verdigimizde burasi calisiyor
         }
-        scan.close(); // bu kod olmadan da calisiyor ama hedef yeni bir girdi ya da ciktinin olmasini
-                        // engellemek.
 
-
-
-    }
+    }//main
 }

@@ -16,9 +16,10 @@ public class Q03_Arrays {
 
         String str="HeySiri";
         String yeniStr []=str.split("y");
+        System.out.println(Arrays.toString(yeniStr));//[He, Siri]
         yeniStr [0] = "Bye";
         str=yeniStr[0] + yeniStr [1];
-        System.out.println(str);
+        System.out.println(str);//ByeSiri
 
 
 

@@ -16,12 +16,12 @@ public class Q04_Arrays {
 
         for (int i=0; i<arr.length; i++){
             for (int j=i+1; j<arr.length; j++){ // j=i+1 demek onemli ona gore ikinci dongude bir sonrakine gecer
-                                                // diger turlu surekli index ayni sayiyi toplar
+                                                // diger turlu surekli index ayni sayilari toplar
                 if (arr[i]+arr[j]==istenenToplam){
                     System.out.println(arr[i] + " ve " + arr[j] + " toplami :" + istenenToplam);
                 }
             }//inner
-        }//outher loop
+        }//outer loop
 
 
 

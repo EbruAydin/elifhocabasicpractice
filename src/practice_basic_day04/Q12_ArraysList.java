@@ -18,24 +18,46 @@ public class Q12_ArraysList {
          */
 
         //BURADA KALDIM!
-        Scanner scan=new Scanner(System.in);
-        System.out.println("Bir list uzunlugu giriniz :");
-        int listUzunluk=scan.nextInt();
+        //1.adim
+        //kullanicindan int list uzunlugu iste
 
-        List<Integer>list=new ArrayList<>();
-        System.out.println("girdiginiz list uzunlugu kadar eleman giriniz :");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Lutfen array uzunlugunu giriniz");
+        int length = scan.nextInt();
 
-        for (int i = 0; i < listUzunluk; i++){
+        List<Integer> list = new ArrayList<>();
+        System.out.println("girdiginiz uzunlukta array list elemanlairni da giriniz");
 
-
+        //2.adim
+        //List uzunlugu kadar kullanicidan list elemanlarini girmesini iste
+        for (int i = 0; i < length; i++) {
+            list.add(scan.nextInt());
         }
 
+        tekrarliElemanList(list);
+
+        //3.adim
+        //Tekrarli list elemanlarindan yeni bir list olusturan method yap
 
 
+    }
 
+    private static void tekrarliElemanList(List<Integer> list) {
 
+        List<Integer> tekrarliList = new ArrayList();
+        for (int i = 0; i < list.size(); i++) { //ilk listem
+            for (int j = i + 1; j < list.size(); j++) { //diger indexleri karislastiracak
+                if (list.get(i) == list.get(j) && !tekrarliList.contains(list.get(i))) {
+                    tekrarliList.add(list.get(i));
+                }
 
-        /*
+            }
+        }
+        System.out.println("tekrarli listenin elemanlari :" + tekrarliList);
+    }
+}
+
+/*
 
         Scanner scan = new Scanner(System.in);
         System.out.print("Olusturmak istediginiz listin uzunlugunu giriniz : ");
@@ -64,5 +86,3 @@ public class Q12_ArraysList {
         System.out.println("tekrarli listenin elemanlari :" + tekrarliList);
 
          */
-    }
-}
